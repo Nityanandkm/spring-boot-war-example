@@ -35,7 +35,7 @@ pipeline {
             
             steps{
                 // deploy on container -> plugin
-                
+                deploy adapters: [tomcat9(path: '', url: 'http://15.206.73.41:8080/')], contextPath: '/app', war: '**/*.war'
 
             }
         }
